@@ -9,7 +9,7 @@ const GreetingLogic = () => {
 
   useEffect(() => {
     dispatch(getResultItem());
-  }, []);
+  });
 
   if (isLoading) {
     return <div>Content is loading...</div>;
