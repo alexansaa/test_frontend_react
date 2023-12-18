@@ -38,8 +38,9 @@ const greetingSlice = createSlice({
         state.isLoading = false;
         state.greeting = action.payload;
       })
-      .addCase(getResultItem.rejected, (state) => {
+      .addCase(getResultItem.rejected, (state, action) => {
         state.isLoading = false;
+        state.error = action.payload;
       });
   },
 });
